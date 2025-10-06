@@ -1,107 +1,123 @@
+/* Import Public Sans font from Google Fonts */
 @import url('https://fonts.googleapis.com/css2?family=Public+Sans:wght@400;700&display=swap');
 
+/* Apply box-sizing and font globally */
 * {
-    box-sizing: border-box;
-    font-family: "Public Sans", Arial, sans-serif;
+    box-sizing: border-box; /* Includes padding and border in element's total width/height */
+    font-family: "Public Sans", Arial, sans-serif; /* Use Public Sans font, fallback to Arial and sans-serif */
 }
 
+/* Body resets and base font size */
 body {
-    margin: 0;
-    padding: 0;
-    font-size: 16px;
+    margin: 0; /* Remove default margin */
+    padding: 0; /* Remove default padding */
+    font-size: 16px; /* Base font size */
 }
 
+/* Top navigation bar styles */
 .topbar {
-    background-color: rgb(0, 78, 66);
-    display: flex;
-    justify-content: space-between;
-    width: 100%;
-    align-items: center;
+    background-color: rgb(0, 78, 66); /* Dark green background */
+    display: flex; /* Flexbox for layout */
+    justify-content: space-between; /* Space out child elements */
+    width: 100%; /* Full width */
+    align-items: center; /* Vertically center items */
 }
 
+/* Logo image size */
 .BHS_LOGO {
-    width: 16.5625em;
+    width: 16.5625em; /* Fixed width for logo */
 }
 
+/* Link inside topbar (likely "Club Link") */
 .club_link {
-    font-size: 1.2em;
-    color: white;
-    text-decoration: none;
-    padding: 3.75em;
+    font-size: 1.2em; /* Slightly larger text */
+    color: white; /* White text */
+    text-decoration: none; /* Remove underline */
+    padding: 3.75em; /* Padding around link for spacing/click area */
 }
 
+/* Header container full width */
 .header {
     width: 100%;
 }
 
+/* Header image styles */
 .header img {
-    height: auto;
-    width: 100%;
-    display: block;
-    object-fit: cover;
+    height: auto; /* Maintain aspect ratio */
+    width: 100%; /* Full container width */
+    display: block; /* Remove inline gap */
+    object-fit: cover; /* Cover container without distortion */
 }
 
+/* Breadcrumb navigation styles */
 .breadcrumbs {
-    padding-top: 4.375em;
-    padding-left: 5em;
-    color: rgb(0, 78, 66);
-    font-size: 1.125em;
+    padding-top: 4.375em; /* Spacing from top */
+    padding-left: 5em; /* Spacing from left */
+    color: rgb(0, 78, 66); /* Dark green text */
+    font-size: 1.125em; /* Slightly larger font */
 }
 
+/* First and second column sections use grid */
 .first-collem,
 .second-collem {
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 5em;
-    align-items: center;
-    padding: 5em 10em;
-    width: 100%;
+    grid-template-columns: 1fr 1fr; /* Two equal columns */
+    gap: 5em; /* Space between columns */
+    align-items: center; /* Vertically center content */
+    padding: 5em 10em; /* Padding inside container */
+    width: 100%; /* Full width */
 }
 
+/* Headings in the first and second column sections */
 .first-collem h2,
 .second-collem h2 {
-    color: rgb(0, 58, 44);
-    width: 70%;
+    color: rgb(0, 58, 44); /* Darker green */
+    width: 70%; /* Limit width for readability */
     font-size: 1.125em;
 }
 
 .first-collem h1,
 .second-collem h1 {
-    color: rgb(0, 171, 142);
+    color: rgb(0, 171, 142); /* Bright green */
     width: 100%;
-    font-size: 2.25em;
+    font-size: 2.25em; /* Large title */
 }
 
+/* Image container widths */
 .first-collem .image,
 .second-collem .image {
     width: 100%;
 }
 
+/* Images in first column */
 .first-collem .image img {
-    width: 100%;
-    height: 27.25em;
-    object-fit: cover;
-    display: block;
-    border-radius: 8px;
+    width: 100%; /* Full container width */
+    height: 27.25em; /* Fixed height */
+    object-fit: cover; /* Maintain aspect ratio, fill area */
+    display: block; /* Remove inline gap */
+    border-radius: 8px; /* Rounded corners */
 }
 
+/* Images in second column and general images */
 .second-collem .image img,
 .second-collem .general img {
-    width: 70%;
-    height: 20em;
+    width: 70%; /* Smaller width */
+    height: 20em; /* Fixed height */
     object-fit: cover;
     display: block;
-    margin: 0 auto; 
+    margin: 0 auto; /* Center horizontally */
     border-radius: 8px;
 }
 
+/* General text/image container in second column */
 .second-collem .general {
     display: flex;
     flex-direction: column;
-    align-items: center;
-    text-align: center;
+    align-items: center; /* Center content */
+    text-align: center; /* Center text */
 }
 
+/* Image container styles in second column */
 .second-collem .image {
     display: flex;
     flex-direction: column;
@@ -109,53 +125,58 @@ body {
     text-align: center;
 }
 
+/* Middle Bar Section (probably awards or feature highlights) */
 .middle_bar {
-    background-color: rgb(0, 78, 66);
+    background-color: rgb(0, 78, 66); /* Dark green background */
     margin-top: 7.75em;
     margin-bottom: 6.25em;
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    align-items: center;
-    gap: 5em;
+    grid-template-columns: 1fr 1fr; /* Two columns */
+    align-items: center; /* Vertically center */
+    gap: 5em; /* Space between columns */
     padding: 5em 10em;
-    height: 60em;
-    position: relative;
-    overflow: hidden;
+    height: 60em; /* Fixed height */
+    position: relative; /* For absolutely positioned child */
+    overflow: hidden; /* Hide overflow */
 }
 
+/* Left column text in middle bar */
 .middle_bar-column-1 {
     color: white;
-    margin-left: 10em;
+    margin-left: 10em; /* Indent text */
 }
 
 .middle_bar-column-1 h1 {
-    font-size: 2.25em;
-    margin: 0 0 0.5em 0;
+    font-size: 2.25em; /* Large title */
+    margin: 0 0 0.5em 0; /* Bottom margin */
 }
 
 .middle_bar-column-1 h2 {
     font-size: 1.125em;
-    font-weight: 400;
+    font-weight: 400; /* Normal weight */
     margin: 0;
-    line-height: 1.6;
-    width: 70%;
+    line-height: 1.6; /* Line spacing */
+    width: 70%; /* Limit width */
 }
 
+/* Right column flex container */
 .middle_bar-column-2 {
     display: flex;
-    align-items: stretch;
-    justify-content: center;
+    align-items: stretch; /* Stretch to fill height */
+    justify-content: center; /* Center horizontally */
 }
 
+/* Image inside middle bar right column */
 .middle_bar-column-2 img {
     width: 100%;
     height: auto;
-    object-fit: contain;
+    object-fit: contain; /* Fit inside without cropping */
     border-radius: 8px;
     display: block;
     margin: 0 auto;
 }
 
+/* Background image in middle_bar (positioned absolutely) */
 .middle_bar > img {
     position: absolute;
     left: 0;
@@ -163,33 +184,39 @@ body {
     height: 100%;
     width: auto;
     object-fit: cover;
-    z-index: 0;
+    z-index: 0; /* Behind content */
 }
 
+/* Responsive styles for screens 768px and below */
 @media (max-width: 768px) {
+    /* Middle bar stacks vertically */
     .middle_bar {
         grid-template-columns: 1fr; 
         height: auto;
     }
 
+    /* Image margin adjustment */
     .middle_bar-column-2 img {
         height: auto;
         margin-top: 1.5em;
     }
 }
 
-
+/* Additional responsive adjustments for small screens */
 @media (max-width: 768px) {
+    /* Smaller base font */
     body {
         font-size: 14px;
     }
 
+    /* Sections stack vertically with padding */
     .first-collem,
     .second-collem {
         display: block;
         padding: 1em;
     }
 
+    /* Images centered and resized */
     .first-collem .image {
         margin: 2em auto;
         width: 80%;
@@ -210,12 +237,14 @@ body {
         object-fit: cover;
     }
 
+    /* Padding for general content */
     .general {
         padding-left: 1em;
         padding-right: 1em;
     }
 }
 
+/* Last Bar Section (e.g. meeting info + map) */
 .last-bar {
     background-color: rgb(0, 78, 66);
     margin-top: 7.75em;
@@ -230,6 +259,7 @@ body {
     overflow: hidden;
 }
 
+/* Left column text styles */
 .last-bar-column-1 {
     color: white;
 }
@@ -247,11 +277,13 @@ body {
     width: 70%;
 }
 
+/* Right column flex container for map */
 .last-bar-column-2 {
     display: flex;
     align-items: stretch;
 }
 
+/* Embedded iframe map styles */
 .last-bar-column-2 iframe {
     width: 100%;
     height: 40em; 
@@ -259,6 +291,7 @@ body {
     border-radius: 8px;
 }
 
+/* Background image on last bar */
 .last-bar > img {
     position: absolute;
     right: 0;
@@ -269,18 +302,22 @@ body {
     z-index: 0;
 }
 
+/* Responsive for last bar on small screens */
 @media (max-width: 768px) {
+    /* Stack vertically */
     .last-bar {
         grid-template-columns: 1fr; 
         height: auto;
     }
 
+    /* Make iframe taller and add top margin */
     .last-bar-column-2 iframe {
         height: 100em;
         margin-top: 1.5em;
     }
 }
 
+/* Bottom Image Section */
 .bottom-image {
     background-image: url("image/lightbox_preview (7).jpg");
     background-size: cover;
@@ -290,14 +327,16 @@ body {
     height: 45em;    
 }
 
+/* Small image inside bottom-image container */
 .bottom-image img {
     height: 100%;
     width: 5vw;
 }
 
+/* Footer styles */
 .footer {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr; /* Three columns */
     gap: 5em;
     align-items: center;   
     justify-items: center; 
@@ -312,22 +351,26 @@ body {
     background-size: contain;
 }
 
+/* Footer images */
 .footer .footer_column img {
     width: 15.5em;
     height: auto;
 }
 
+/* Left align first footer column */
 .footer .footer_column {
     justify-self: start;
     margin-left: 45px;
 }
 
+/* Second footer column styles */
 .footer_column_2 {
     text-align: left;
     color: white;
     margin-left: 250px;
 }
 
+/* Headings in footer columns 2 and 3 */
 .footer_column_2 h2,
 .footer_column_3 h2 {
     font-size: 1.125em;
@@ -337,6 +380,7 @@ body {
     margin: 0;
 }
 
+/* Links inside footer columns 2 and 3 */
 .footer_column_2 h2 a,
 .footer_column_3 h2 a {
     color: white;
@@ -345,7 +389,8 @@ body {
     font-weight: 400;
 }
 
+/* Link hover color change */
 .footer_column_2 h2 a:hover,
 .footer_column_3 h2 a:hover {
-        color: rgb(0, 171, 142);
+    color: rgb(0, 171, 142);
 }
